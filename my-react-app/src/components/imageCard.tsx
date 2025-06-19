@@ -19,7 +19,11 @@ const ImageCard: React.FC<ImageCardProps> = ({ item, onClick }) => {
 
   return (
     <div onClick={() => onClick(item)}>
-      <img className={styles.image} src={urls.small} alt={alt_description} />
+      <img
+        className={styles.image}
+        src={urls.small}
+        alt={alt_description || "No description"}
+      />
     </div>
   );
 };
