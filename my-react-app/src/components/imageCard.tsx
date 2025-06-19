@@ -1,10 +1,12 @@
 import styles from "./imageCard.module.css";
 
 type ImageItem = {
+  id: string;
   urls: {
     small: string;
+    regular: string;
   };
-  alt_description: string;
+  alt_description: string | null;
 };
 
 type ImageCardProps = {
